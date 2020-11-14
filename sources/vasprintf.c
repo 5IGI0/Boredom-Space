@@ -17,6 +17,7 @@ int main(void) {
 
     if (my_asprintf(&tmp, "timestamp: %d", time(NULL)) >= 0) {
         puts(tmp);
+        free(tmp);
     } else {
         perror("my_asprintf");
         return EXIT_FAILURE;
